@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E28591B4550F000A880DC /* Default-568h@2x.png */; };
 		042B51531B4549D8006973C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B51521B4549D8006973C3 /* main.m */; };
 		042B51561B4549D8006973C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B51551B4549D8006973C3 /* AppDelegate.m */; };
-		042B51591B4549D8006973C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B51581B4549D8006973C3 /* ViewController.m */; };
-		042B515C1B4549D8006973C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B515A1B4549D8006973C3 /* Main.storyboard */; };
 		042B515E1B4549D8006973C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B515D1B4549D8006973C3 /* Images.xcassets */; };
-		042B51611B4549D8006973C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042B515F1B4549D8006973C3 /* LaunchScreen.xib */; };
 		042B516D1B4549D8006973C3 /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B516C1B4549D8006973C3 /* WeiboTests.m */; };
 /* End PBXBuildFile section */
 
@@ -27,16 +25,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E28591B4550F000A880DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		042B514D1B4549D8006973C3 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B51511B4549D8006973C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042B51521B4549D8006973C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		042B51541B4549D8006973C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		042B51551B4549D8006973C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		042B51571B4549D8006973C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		042B51581B4549D8006973C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		042B515B1B4549D8006973C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		042B515D1B4549D8006973C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		042B51601B4549D8006973C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		042B51661B4549D8006973C3 /* WeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B516B1B4549D8006973C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042B516C1B4549D8006973C3 /* WeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboTests.m; sourceTree = "<group>"; };
@@ -60,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E285B1B45535500A880DC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				042B51541B4549D8006973C3 /* AppDelegate.h */,
+				042B51551B4549D8006973C3 /* AppDelegate.m */,
+				042B51521B4549D8006973C3 /* main.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		042B51441B4549D8006973C3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +86,7 @@
 		042B514F1B4549D8006973C3 /* Weibo */ = {
 			isa = PBXGroup;
 			children = (
-				042B51541B4549D8006973C3 /* AppDelegate.h */,
-				042B51551B4549D8006973C3 /* AppDelegate.m */,
-				042B51571B4549D8006973C3 /* ViewController.h */,
-				042B51581B4549D8006973C3 /* ViewController.m */,
-				042B515A1B4549D8006973C3 /* Main.storyboard */,
-				042B515D1B4549D8006973C3 /* Images.xcassets */,
-				042B515F1B4549D8006973C3 /* LaunchScreen.xib */,
+				040E285B1B45535500A880DC /* Classes */,
 				042B51501B4549D8006973C3 /* Supporting Files */,
 			);
 			path = Weibo;
@@ -96,8 +95,9 @@
 		042B51501B4549D8006973C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				042B515D1B4549D8006973C3 /* Images.xcassets */,
+				040E28591B4550F000A880DC /* Default-568h@2x.png */,
 				042B51511B4549D8006973C3 /* Info.plist */,
-				042B51521B4549D8006973C3 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,9 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042B515C1B4549D8006973C3 /* Main.storyboard in Resources */,
-				042B51611B4549D8006973C3 /* LaunchScreen.xib in Resources */,
 				042B515E1B4549D8006973C3 /* Images.xcassets in Resources */,
+				040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +218,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042B51591B4549D8006973C3 /* ViewController.m in Sources */,
 				042B51561B4549D8006973C3 /* AppDelegate.m in Sources */,
 				042B51531B4549D8006973C3 /* main.m in Sources */,
 			);
@@ -242,25 +240,6 @@
 			targetProxy = 042B51671B4549D8006973C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		042B515A1B4549D8006973C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				042B515B1B4549D8006973C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		042B515F1B4549D8006973C3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				042B51601B4549D8006973C3 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		042B516E1B4549D8006973C3 /* Debug */ = {
@@ -418,6 +397,7 @@
 				042B51721B4549D8006973C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		042B51731B4549D8006973C3 /* Build configuration list for PBXNativeTarget "WeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +406,7 @@
 				042B51751B4549D8006973C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
