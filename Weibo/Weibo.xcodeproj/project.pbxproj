@@ -16,6 +16,7 @@
 		04B96CE31B46908B00EACD42 /* YCYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CDF1B46908B00EACD42 /* YCYProfileViewController.m */; };
 		04B96CE61B4690AB00EACD42 /* YCYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CE51B4690AB00EACD42 /* YCYAppDelegate.m */; };
 		04B96CEC1B46917100EACD42 /* YCYMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */; };
+		04B96CEF1B469A0A00EACD42 /* YCYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		04B96CE51B4690AB00EACD42 /* YCYAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYAppDelegate.m; sourceTree = "<group>"; };
 		04B96CEA1B46917100EACD42 /* YCYMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYMessageCenterViewController.h; sourceTree = "<group>"; };
 		04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYMessageCenterViewController.m; sourceTree = "<group>"; };
+		04B96CED1B469A0A00EACD42 /* YCYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTabBarViewController.h; sourceTree = "<group>"; };
+		04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				04B96CDF1B46908B00EACD42 /* YCYProfileViewController.m */,
 				04B96CEA1B46917100EACD42 /* YCYMessageCenterViewController.h */,
 				04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */,
+				04B96CED1B469A0A00EACD42 /* YCYTabBarViewController.h */,
+				04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			files = (
 				04B96CE61B4690AB00EACD42 /* YCYAppDelegate.m in Sources */,
 				04B96CE31B46908B00EACD42 /* YCYProfileViewController.m in Sources */,
+				04B96CEF1B469A0A00EACD42 /* YCYTabBarViewController.m in Sources */,
 				04B96CEC1B46917100EACD42 /* YCYMessageCenterViewController.m in Sources */,
 				04B96CE01B46908B00EACD42 /* YCYDiscoverViewController.m in Sources */,
 				042B51531B4549D8006973C3 /* main.m in Sources */,
