@@ -45,7 +45,13 @@
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectdImage
 {
     // 设置子控制器的文字和图片
-    childVc.tabBarItem.title = title;
+//    childVc.tabBarItem.title = title; // 设置tabBar的文字
+//    childVc.navigationItem.title = title; // 设置navigationBar的文字
+    
+    // 设置childVc的title可以显示tabBar和navigationBar文字
+    childVc.title = title;
+    
+    // 设置子控制器的图片
     childVc.tabBarItem.image = [UIImage imageNamed:image];
     
     // 声明：这张图片按照原始的样子显示出来，不要自动渲染。
@@ -60,8 +66,11 @@
     
     childVc.view.backgroundColor = YCYRandomColor;
     
+    // 先给外面传进来的小控制器，包装一个导航控制器
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+
     // 添加为子控制器
-    [self addChildViewController:childVc];
+    [self addChildViewController:nav];
 }
 
 @end
