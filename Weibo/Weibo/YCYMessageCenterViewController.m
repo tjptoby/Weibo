@@ -7,6 +7,7 @@
 //
 
 #import "YCYMessageCenterViewController.h"
+#import "YCYTest1ViewController.h"
 
 @interface YCYMessageCenterViewController ()
 
@@ -45,6 +46,15 @@
     cell.textLabel.text = [NSString stringWithFormat:@"test-message-%d", indexPath.row];
     
     return cell;
+}
+
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YCYTest1ViewController *test1 = [[YCYTest1ViewController alloc] init];
+    test1.title = @"测试1控制器";
+    test1.hidesBottomBarWhenPushed = YES;
+                                     [self.navigationController pushViewController:test1 animated:YES];
 }
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406390F1B47DAE3000A2922 /* YCYTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406390D1B47DAE3000A2922 /* YCYTest1ViewController.m */; };
+		040639101B47DAE3000A2922 /* YCYTest1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0406390E1B47DAE3000A2922 /* YCYTest1ViewController.xib */; };
+		040639141B47E090000A2922 /* YCYTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040639121B47E090000A2922 /* YCYTest2ViewController.m */; };
+		040639151B47E090000A2922 /* YCYTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040639131B47E090000A2922 /* YCYTest2ViewController.xib */; };
 		040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E28591B4550F000A880DC /* Default-568h@2x.png */; };
 		042B51531B4549D8006973C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B51521B4549D8006973C3 /* main.m */; };
 		042B515E1B4549D8006973C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B515D1B4549D8006973C3 /* Images.xcassets */; };
@@ -30,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406390C1B47DAE3000A2922 /* YCYTest1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTest1ViewController.h; sourceTree = "<group>"; };
+		0406390D1B47DAE3000A2922 /* YCYTest1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTest1ViewController.m; sourceTree = "<group>"; };
+		0406390E1B47DAE3000A2922 /* YCYTest1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCYTest1ViewController.xib; sourceTree = "<group>"; };
+		040639111B47E090000A2922 /* YCYTest2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTest2ViewController.h; sourceTree = "<group>"; };
+		040639121B47E090000A2922 /* YCYTest2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTest2ViewController.m; sourceTree = "<group>"; };
+		040639131B47E090000A2922 /* YCYTest2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCYTest2ViewController.xib; sourceTree = "<group>"; };
 		040E28591B4550F000A880DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		042B514D1B4549D8006973C3 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B51511B4549D8006973C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +97,12 @@
 				04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */,
 				04B96CED1B469A0A00EACD42 /* YCYTabBarViewController.h */,
 				04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */,
+				0406390C1B47DAE3000A2922 /* YCYTest1ViewController.h */,
+				0406390D1B47DAE3000A2922 /* YCYTest1ViewController.m */,
+				0406390E1B47DAE3000A2922 /* YCYTest1ViewController.xib */,
+				040639111B47E090000A2922 /* YCYTest2ViewController.h */,
+				040639121B47E090000A2922 /* YCYTest2ViewController.m */,
+				040639131B47E090000A2922 /* YCYTest2ViewController.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -227,7 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				042B515E1B4549D8006973C3 /* Images.xcassets in Resources */,
+				040639151B47E090000A2922 /* YCYTest2ViewController.xib in Resources */,
 				040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */,
+				040639101B47DAE3000A2922 /* YCYTest1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0406390F1B47DAE3000A2922 /* YCYTest1ViewController.m in Sources */,
 				04B96CE61B4690AB00EACD42 /* YCYAppDelegate.m in Sources */,
 				04B96CE31B46908B00EACD42 /* YCYProfileViewController.m in Sources */,
+				040639141B47E090000A2922 /* YCYTest2ViewController.m in Sources */,
 				04B96CEF1B469A0A00EACD42 /* YCYTabBarViewController.m in Sources */,
 				04B96CEC1B46917100EACD42 /* YCYMessageCenterViewController.m in Sources */,
 				04B96CE01B46908B00EACD42 /* YCYDiscoverViewController.m in Sources */,
