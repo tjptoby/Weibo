@@ -12,6 +12,7 @@
 #import "YCYDiscoverViewController.h"
 #import "YCYHomeViewController.h"
 #import "YCYMessageCenterViewController.h"
+#import "YCYNavigationController.h"
 
 @interface YCYTabBarViewController ()
 
@@ -67,8 +68,8 @@
     childVc.view.backgroundColor = YCYRandomColor;
     
     // 先给外面传进来的小控制器，包装一个导航控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
-
+    YCYNavigationController *nav = [[YCYNavigationController alloc] initWithRootViewController:childVc];
+    
     // 添加为子控制器
     [self addChildViewController:nav];
 }
