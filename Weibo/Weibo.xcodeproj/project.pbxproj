@@ -21,6 +21,10 @@
 		04B96CE61B4690AB00EACD42 /* YCYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CE51B4690AB00EACD42 /* YCYAppDelegate.m */; };
 		04B96CEC1B46917100EACD42 /* YCYMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */; };
 		04B96CEF1B469A0A00EACD42 /* YCYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */; };
+		04E68BEF1B4911CE0005B60C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E68BEE1B4911CE0005B60C /* UIView+Extension.m */; };
+		04E68BF31B491CEE0005B60C /* YCYTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E68BF11B491CEE0005B60C /* YCYTest3ViewController.m */; };
+		04E68BF41B491CEE0005B60C /* YCYTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E68BF21B491CEE0005B60C /* YCYTest3ViewController.xib */; };
+		04E68BFA1B4926630005B60C /* YCYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E68BF91B4926630005B60C /* YCYNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,13 @@
 		04B96CEB1B46917100EACD42 /* YCYMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYMessageCenterViewController.m; sourceTree = "<group>"; };
 		04B96CED1B469A0A00EACD42 /* YCYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTabBarViewController.h; sourceTree = "<group>"; };
 		04B96CEE1B469A0A00EACD42 /* YCYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTabBarViewController.m; sourceTree = "<group>"; };
+		04E68BED1B4911CE0005B60C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		04E68BEE1B4911CE0005B60C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		04E68BF01B491CEE0005B60C /* YCYTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTest3ViewController.h; sourceTree = "<group>"; };
+		04E68BF11B491CEE0005B60C /* YCYTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTest3ViewController.m; sourceTree = "<group>"; };
+		04E68BF21B491CEE0005B60C /* YCYTest3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCYTest3ViewController.xib; sourceTree = "<group>"; };
+		04E68BF81B4926630005B60C /* YCYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYNavigationController.h; sourceTree = "<group>"; };
+		04E68BF91B4926630005B60C /* YCYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +114,13 @@
 				040639111B47E090000A2922 /* YCYTest2ViewController.h */,
 				040639121B47E090000A2922 /* YCYTest2ViewController.m */,
 				040639131B47E090000A2922 /* YCYTest2ViewController.xib */,
+				04E68BF01B491CEE0005B60C /* YCYTest3ViewController.h */,
+				04E68BF11B491CEE0005B60C /* YCYTest3ViewController.m */,
+				04E68BF21B491CEE0005B60C /* YCYTest3ViewController.xib */,
+				04E68BF81B4926630005B60C /* YCYNavigationController.h */,
+				04E68BF91B4926630005B60C /* YCYNavigationController.m */,
+				04E68BED1B4911CE0005B60C /* UIView+Extension.h */,
+				04E68BEE1B4911CE0005B60C /* UIView+Extension.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -245,6 +263,7 @@
 				042B515E1B4549D8006973C3 /* Images.xcassets in Resources */,
 				040639151B47E090000A2922 /* YCYTest2ViewController.xib in Resources */,
 				040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */,
+				04E68BF41B491CEE0005B60C /* YCYTest3ViewController.xib in Resources */,
 				040639101B47DAE3000A2922 /* YCYTest1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,13 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E68BEF1B4911CE0005B60C /* UIView+Extension.m in Sources */,
 				0406390F1B47DAE3000A2922 /* YCYTest1ViewController.m in Sources */,
 				04B96CE61B4690AB00EACD42 /* YCYAppDelegate.m in Sources */,
 				04B96CE31B46908B00EACD42 /* YCYProfileViewController.m in Sources */,
 				040639141B47E090000A2922 /* YCYTest2ViewController.m in Sources */,
+				04E68BFA1B4926630005B60C /* YCYNavigationController.m in Sources */,
 				04B96CEF1B469A0A00EACD42 /* YCYTabBarViewController.m in Sources */,
 				04B96CEC1B46917100EACD42 /* YCYMessageCenterViewController.m in Sources */,
 				04B96CE01B46908B00EACD42 /* YCYDiscoverViewController.m in Sources */,
+				04E68BF31B491CEE0005B60C /* YCYTest3ViewController.m in Sources */,
 				042B51531B4549D8006973C3 /* main.m in Sources */,
 				04B96CE11B46908B00EACD42 /* YCYHomeViewController.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "YCYTest1ViewController.h"
 #import "YCYTest2ViewController.h"
+#import "PrefixHeader.pch"
 
 @interface YCYTest1ViewController ()
 
@@ -17,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
