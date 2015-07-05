@@ -25,6 +25,7 @@
 		04FFC58E1B4954FA0028872D /* YCYTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFC57E1B4954FA0028872D /* YCYTest2ViewController.xib */; };
 		04FFC58F1B4954FA0028872D /* YCYTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5801B4954FA0028872D /* YCYTest3ViewController.m */; };
 		04FFC5901B4954FA0028872D /* YCYTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFC5811B4954FA0028872D /* YCYTest3ViewController.xib */; };
+		04FFC5961B496B170028872D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5951B496B170028872D /* UIBarButtonItem+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		04FFC57F1B4954FA0028872D /* YCYTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTest3ViewController.h; sourceTree = "<group>"; };
 		04FFC5801B4954FA0028872D /* YCYTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTest3ViewController.m; sourceTree = "<group>"; };
 		04FFC5811B4954FA0028872D /* YCYTest3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCYTest3ViewController.xib; sourceTree = "<group>"; };
+		04FFC5941B496B170028872D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		04FFC5951B496B170028872D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 			children = (
 				04FFC55D1B4954FA0028872D /* UIView+Extension.h */,
 				04FFC55E1B4954FA0028872D /* UIView+Extension.m */,
+				04FFC5941B496B170028872D /* UIBarButtonItem+Extension.h */,
+				04FFC5951B496B170028872D /* UIBarButtonItem+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				04FFC5881B4954FA0028872D /* YCYAppDelegate.m in Sources */,
 				04FFC5851B4954FA0028872D /* YCYNavigationController.m in Sources */,
 				04FFC5821B4954FA0028872D /* YCYDiscoverViewController.m in Sources */,
+				04FFC5961B496B170028872D /* UIBarButtonItem+Extension.m in Sources */,
 				04FFC58D1B4954FA0028872D /* YCYTest2ViewController.m in Sources */,
 				04FFC58A1B4954FA0028872D /* YCYProfileViewController.m in Sources */,
 				04FFC5871B4954FA0028872D /* main.m in Sources */,
