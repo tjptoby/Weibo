@@ -53,8 +53,8 @@
 {
     YCYTest1ViewController *test1 = [[YCYTest1ViewController alloc] init];
     test1.title = @"测试1控制器";
-    test1.hidesBottomBarWhenPushed = YES;
-                                     [self.navigationController pushViewController:test1 animated:YES];
+    
+    [self.navigationController pushViewController:test1 animated:YES];
 }
 
 @end
