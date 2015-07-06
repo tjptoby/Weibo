@@ -1,21 +1,18 @@
 //
-//  YCYProfileViewController.m
+//  YCYTitleMenuViewController.m
 //  Weibo
 //
-//  Created by Cheney on 15/7/3.
+//  Created by Cheney on 15/7/6.
 //  Copyright (c) 2015年 Cheney. All rights reserved.
 //
 
-#import "YCYProfileViewController.h"
-#import "YCYTest1ViewController.h"
-#import "YCYSearchBar.h"
-#import "PrefixHeader.pch"
+#import "YCYTitleMenuViewController.h"
 
-@interface YCYProfileViewController ()
+@interface YCYTitleMenuViewController ()
 
 @end
 
-@implementation YCYProfileViewController
+@implementation YCYTitleMenuViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

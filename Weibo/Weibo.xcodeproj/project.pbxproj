@@ -11,6 +11,8 @@
 		042B515E1B4549D8006973C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B515D1B4549D8006973C3 /* Images.xcassets */; };
 		042B516D1B4549D8006973C3 /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B516C1B4549D8006973C3 /* WeiboTests.m */; };
 		04D28BA21B4A741A00941FBF /* YCYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D28BA11B4A741A00941FBF /* YCYSearchBar.m */; };
+		04D28BA51B4A95CC00941FBF /* YCYDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D28BA41B4A95CC00941FBF /* YCYDropdownMenu.m */; };
+		04D28BA81B4ABAEB00941FBF /* YCYTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D28BA71B4ABAEB00941FBF /* YCYTitleMenuViewController.m */; };
 		04FFC5821B4954FA0028872D /* YCYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5521B4954FA0028872D /* YCYDiscoverViewController.m */; };
 		04FFC5831B4954FA0028872D /* YCYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5581B4954FA0028872D /* YCYHomeViewController.m */; };
 		04FFC5841B4954FA0028872D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC55E1B4954FA0028872D /* UIView+Extension.m */; };
@@ -49,6 +51,10 @@
 		042B516C1B4549D8006973C3 /* WeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboTests.m; sourceTree = "<group>"; };
 		04D28BA01B4A741A00941FBF /* YCYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYSearchBar.h; sourceTree = "<group>"; };
 		04D28BA11B4A741A00941FBF /* YCYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYSearchBar.m; sourceTree = "<group>"; };
+		04D28BA31B4A95CC00941FBF /* YCYDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYDropdownMenu.h; sourceTree = "<group>"; };
+		04D28BA41B4A95CC00941FBF /* YCYDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYDropdownMenu.m; sourceTree = "<group>"; };
+		04D28BA61B4ABAEA00941FBF /* YCYTitleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTitleMenuViewController.h; sourceTree = "<group>"; };
+		04D28BA71B4ABAEB00941FBF /* YCYTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTitleMenuViewController.m; sourceTree = "<group>"; };
 		04FFC5511B4954FA0028872D /* YCYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYDiscoverViewController.h; sourceTree = "<group>"; };
 		04FFC5521B4954FA0028872D /* YCYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYDiscoverViewController.m; sourceTree = "<group>"; };
 		04FFC5571B4954FA0028872D /* YCYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYHomeViewController.h; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 		04FFC55A1B4954FA0028872D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04D28BA61B4ABAEA00941FBF /* YCYTitleMenuViewController.h */,
+				04D28BA71B4ABAEB00941FBF /* YCYTitleMenuViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +297,8 @@
 			children = (
 				04D28BA01B4A741A00941FBF /* YCYSearchBar.h */,
 				04D28BA11B4A741A00941FBF /* YCYSearchBar.m */,
+				04D28BA31B4A95CC00941FBF /* YCYDropdownMenu.h */,
+				04D28BA41B4A95CC00941FBF /* YCYDropdownMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -486,6 +496,7 @@
 			files = (
 				04FFC5841B4954FA0028872D /* UIView+Extension.m in Sources */,
 				04FFC5861B4954FA0028872D /* YCYTabBarViewController.m in Sources */,
+				04D28BA81B4ABAEB00941FBF /* YCYTitleMenuViewController.m in Sources */,
 				04FFC58F1B4954FA0028872D /* YCYTest3ViewController.m in Sources */,
 				04FFC5891B4954FA0028872D /* YCYMessageCenterViewController.m in Sources */,
 				04FFC5881B4954FA0028872D /* YCYAppDelegate.m in Sources */,
@@ -494,6 +505,7 @@
 				04FFC5961B496B170028872D /* UIBarButtonItem+Extension.m in Sources */,
 				04FFC58D1B4954FA0028872D /* YCYTest2ViewController.m in Sources */,
 				04D28BA21B4A741A00941FBF /* YCYSearchBar.m in Sources */,
+				04D28BA51B4A95CC00941FBF /* YCYDropdownMenu.m in Sources */,
 				04FFC58A1B4954FA0028872D /* YCYProfileViewController.m in Sources */,
 				04FFC5871B4954FA0028872D /* main.m in Sources */,
 				04FFC58B1B4954FA0028872D /* YCYTest1ViewController.m in Sources */,
