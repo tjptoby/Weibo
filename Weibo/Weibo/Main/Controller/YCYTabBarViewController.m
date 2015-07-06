@@ -65,7 +65,8 @@
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selecteTextAttrs forState:UIControlStateSelected];
     
-    childVc.view.backgroundColor = YCYRandomColor;
+    // 随机色
+//    childVc.view.backgroundColor = YCYRandomColor;
     
     // 先给外面传进来的小控制器，包装一个导航控制器
     YCYNavigationController *nav = [[YCYNavigationController alloc] initWithRootViewController:childVc];

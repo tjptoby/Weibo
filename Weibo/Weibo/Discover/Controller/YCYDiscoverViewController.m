@@ -7,6 +7,7 @@
 //
 
 #import "YCYDiscoverViewController.h"
+#import "UIView+Extension.h"
 
 @interface YCYDiscoverViewController ()
 
@@ -17,11 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 创建搜索框对象
+    UITextField *searchBar = [[UITextField alloc] init];
+    searchBar.width = 300;
+    searchBar.height = 30;
+    searchBar.font = [UIFont systemFontOfSize:15];
+    searchBar.placeholder = @"请输入搜索条件";
+    searchBar.background = [UIImage imageNamed:@"searchbar_textfield_background"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 设置左边的放大镜图标
+    UIImageView *searchIcon = [[UIImageView alloc] init];
+    searchIcon.image = [UIImage imageNamed:@"searchbar_textfield_search_icon"];
+    searchIcon.width = 30;
+    searchIcon.height = 30;
+    searchIcon.contentMode = UIViewContentModeCenter;
+    searchBar.leftView = searchIcon;
+    searchBar.leftViewMode = UITextFieldViewModeAlways;
+    
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {

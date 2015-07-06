@@ -15,6 +15,25 @@
 
 @implementation YCYNavigationController
 
++ (void)initialize
+{
+    // 设置整个项目的所有item主题样式
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    // 设置普通状态
+    NSMutableDictionary *textAttr = [NSMutableDictionary dictionary];
+    textAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    textAttr[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:textAttr forState:UIControlStateNormal];
+    
+    // 设置不可用状态
+    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
+    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.7 alpha:0.4];
+    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
