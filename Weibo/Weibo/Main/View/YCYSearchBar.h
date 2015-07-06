@@ -10,4 +10,6 @@
 
 @interface YCYSearchBar : UITextField
 
++ (instancetype)searchBar;
+
 @end

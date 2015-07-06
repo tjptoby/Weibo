@@ -8,6 +8,8 @@
 
 #import "YCYProfileViewController.h"
 #import "YCYTest1ViewController.h"
+#import "YCYSearchBar.h"
+#import "PrefixHeader.pch"
 
 @interface YCYProfileViewController ()
 
@@ -19,6 +21,12 @@
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:0 target:self action:@selector(setting)];
+    
+    // 创建搜索框对象
+    YCYSearchBar *searchBar = [YCYSearchBar searchBar];
+    searchBar.width = 300;
+    searchBar.height = 30;
+    [self.view addSubview:searchBar];
 }
 
 - (void)setting

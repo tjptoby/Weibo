@@ -10,6 +10,7 @@
 		040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E28591B4550F000A880DC /* Default-568h@2x.png */; };
 		042B515E1B4549D8006973C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B515D1B4549D8006973C3 /* Images.xcassets */; };
 		042B516D1B4549D8006973C3 /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B516C1B4549D8006973C3 /* WeiboTests.m */; };
+		04D28BA21B4A741A00941FBF /* YCYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D28BA11B4A741A00941FBF /* YCYSearchBar.m */; };
 		04FFC5821B4954FA0028872D /* YCYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5521B4954FA0028872D /* YCYDiscoverViewController.m */; };
 		04FFC5831B4954FA0028872D /* YCYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC5581B4954FA0028872D /* YCYHomeViewController.m */; };
 		04FFC5841B4954FA0028872D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFC55E1B4954FA0028872D /* UIView+Extension.m */; };
@@ -46,6 +47,8 @@
 		042B51661B4549D8006973C3 /* WeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B516B1B4549D8006973C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042B516C1B4549D8006973C3 /* WeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboTests.m; sourceTree = "<group>"; };
+		04D28BA01B4A741A00941FBF /* YCYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYSearchBar.h; sourceTree = "<group>"; };
+		04D28BA11B4A741A00941FBF /* YCYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYSearchBar.m; sourceTree = "<group>"; };
 		04FFC5511B4954FA0028872D /* YCYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYDiscoverViewController.h; sourceTree = "<group>"; };
 		04FFC5521B4954FA0028872D /* YCYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYDiscoverViewController.m; sourceTree = "<group>"; };
 		04FFC5571B4954FA0028872D /* YCYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYHomeViewController.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 		04FFC56A1B4954FA0028872D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04D28BA01B4A741A00941FBF /* YCYSearchBar.h */,
+				04D28BA11B4A741A00941FBF /* YCYSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 				04FFC5821B4954FA0028872D /* YCYDiscoverViewController.m in Sources */,
 				04FFC5961B496B170028872D /* UIBarButtonItem+Extension.m in Sources */,
 				04FFC58D1B4954FA0028872D /* YCYTest2ViewController.m in Sources */,
+				04D28BA21B4A741A00941FBF /* YCYSearchBar.m in Sources */,
 				04FFC58A1B4954FA0028872D /* YCYProfileViewController.m in Sources */,
 				04FFC5871B4954FA0028872D /* main.m in Sources */,
 				04FFC58B1B4954FA0028872D /* YCYTest1ViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "YCYDiscoverViewController.h"
 #import "UIView+Extension.h"
+#import "YCYSearchBar.h"
 
 @interface YCYDiscoverViewController ()
 
@@ -19,22 +20,9 @@
     [super viewDidLoad];
     
     // 创建搜索框对象
-    UITextField *searchBar = [[UITextField alloc] init];
+    YCYSearchBar *searchBar = [YCYSearchBar searchBar];
     searchBar.width = 300;
     searchBar.height = 30;
-    searchBar.font = [UIFont systemFontOfSize:15];
-    searchBar.placeholder = @"请输入搜索条件";
-    searchBar.background = [UIImage imageNamed:@"searchbar_textfield_background"];
-    
-    // 设置左边的放大镜图标
-    UIImageView *searchIcon = [[UIImageView alloc] init];
-    searchIcon.image = [UIImage imageNamed:@"searchbar_textfield_search_icon"];
-    searchIcon.width = 30;
-    searchIcon.height = 30;
-    searchIcon.contentMode = UIViewContentModeCenter;
-    searchBar.leftView = searchIcon;
-    searchBar.leftViewMode = UITextFieldViewModeAlways;
-    
     self.navigationItem.titleView = searchBar;
 }
 
