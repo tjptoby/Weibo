@@ -89,7 +89,7 @@
     
     // 4.调整灰色图片的位置
     self.containerView.x = (self.width - self.containerView.width) * 0.5;
-    self.containerView.y = 50;
+    self.containerView.y = CGRectGetMaxY(from.frame) + 10;
 }
 
 /**
