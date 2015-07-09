@@ -11,13 +11,14 @@
 #import "YCYDropdownMenu.h"
 #import "YCYTitleMenuViewController.h"
 
-@interface YCYHomeViewController ()
+@interface YCYHomeViewController () <YCYDropdownMenuDelegate>
 
 @end
 
 @implementation YCYHomeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     /* 设置导航栏上面的内容 */
@@ -25,16 +26,21 @@
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
     
+    /* 中间的标题按钮 */
+    //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIButton *titleButton = [[UIButton alloc] init];
     titleButton.width = 150;
     titleButton.height = 30;
+    //    titleButton.backgroundColor = HWRandomColor;
     
     // 设置图片和文字
     [titleButton setTitle:@"首页" forState:UIControlStateNormal];
     [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-   
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+    //    titleButton.imageView.backgroundColor = [UIColor redColor];
+    //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
     titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
     titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
     
@@ -49,14 +55,17 @@
  */
 - (void)titleClick:(UIButton *)titleButton
 {
-    // 创建下拉菜单
+    // 1.创建下拉菜单
     YCYDropdownMenu *menu = [YCYDropdownMenu menu];
+    menu.delegate = self;
     
+    // 2.设置内容
     YCYTitleMenuViewController *vc = [[YCYTitleMenuViewController alloc] init];
-    vc.view.height = 44 * 3;
+    vc.view.height = 150;
+    vc.view.width = 150;
     menu.contentController = vc;
     
-    // 显示
+    // 3.显示
     [menu showFrom:titleButton];
 }
 
@@ -70,16 +79,24 @@
     NSLog(@"pop");
 }
 
-#pragma mark - Table view data source
+#pragma mark - HWDropdownMenuDelegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/**
+ *  下拉菜单被销毁了
+ */
+- (void)dropdownMenuDidDismiss:(YCYDropdownMenu *)menu
 {
-    return 0;
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = NO;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+/**
+ *  下拉菜单显示了
+ */
+- (void)dropdownMenuDidShow:(YCYDropdownMenu *)menu
 {
-    return 0;
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = YES;
 }
 
 @end

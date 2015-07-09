@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class YCYDropdownMenu;
+
+@protocol YCYDropdownMenuDelegate <NSObject>
+@optional
+- (void)dropdownMenuDidDismiss:(YCYDropdownMenu *)menu;
+- (void)dropdownMenuDidShow:(YCYDropdownMenu *)menu;
+@end
+
 @interface YCYDropdownMenu : UIView
+@property (nonatomic, weak) id<YCYDropdownMenuDelegate> delegate;
 
 + (instancetype)menu;
 
@@ -31,3 +40,4 @@
 @property (nonatomic, strong) UIViewController *contentController;
 
 @end
+

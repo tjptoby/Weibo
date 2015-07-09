@@ -13,6 +13,7 @@
 #import "YCYHomeViewController.h"
 #import "YCYMessageCenterViewController.h"
 #import "YCYNavigationController.h"
+#import "YCYTabBar.h"
 
 @interface YCYTabBarViewController ()
 
@@ -20,59 +21,68 @@
 
 @implementation YCYTabBarViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    // 初始化子控制器
-    // 设置子控制器
+    // 1.初始化子控制器
     YCYHomeViewController *home = [[YCYHomeViewController alloc] init];
     [self addChildVc:home title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
+    
     YCYMessageCenterViewController *messageCenter = [[YCYMessageCenterViewController alloc] init];
     [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
+    
     YCYDiscoverViewController *discover = [[YCYDiscoverViewController alloc] init];
     [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
+    
     YCYProfileViewController *profile = [[YCYProfileViewController alloc] init];
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+    
+    // 2.更换系统自带的tabbar
+    //    self.tabBar = [[HWTabBar alloc] init];
+    YCYTabBar *tabBar = [[YCYTabBar alloc] init];
+    tabBar.delegate = self;
+    [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
 /**
  *  添加一个子控制器
  *
- *  @param childVc      子控制器
- *  @param title        标题
- *  @param image        图片
- *  @param selectdImage 选中的图片
+ *  @param childVc       子控制器
+ *  @param title         标题
+ *  @param image         图片
+ *  @param selectedImage 选中的图片
  */
-- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectdImage
+- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
-    // 设置子控制器的文字和图片
-//    childVc.tabBarItem.title = title; // 设置tabBar的文字
-//    childVc.navigationItem.title = title; // 设置navigationBar的文字
-    
-    // 设置childVc的title可以显示tabBar和navigationBar文字
+    // // 同时设置tabbar和navigationBar的文字
     childVc.title = title;
     
     // 设置子控制器的图片
     childVc.tabBarItem.image = [UIImage imageNamed:image];
+    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    // 声明：这张图片按照原始的样子显示出来，不要自动渲染。
-    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectdImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    // 设置文字样式
+    // 设置文字的样式
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = YCYColor(123, 123, 123);
-    NSMutableDictionary *selecteTextAttrs = [NSMutableDictionary dictionary];
+    NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
+    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-    [childVc.tabBarItem setTitleTextAttributes:selecteTextAttrs forState:UIControlStateSelected];
+    [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
+    //    childVc.view.backgroundColor = HWRandomColor;
     
-    // 随机色
-//    childVc.view.backgroundColor = YCYRandomColor;
-    
-    // 先给外面传进来的小控制器，包装一个导航控制器
+    // 先给外面传进来的小控制器 包装 一个导航控制器
     YCYNavigationController *nav = [[YCYNavigationController alloc] initWithRootViewController:childVc];
-    
     // 添加为子控制器
     [self addChildViewController:nav];
+}
+
+#pragma mark - HWTabBarDelegate代理方法
+- (void)tabBarDidClickPlusButton:(YCYTabBar *)tabBar
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
