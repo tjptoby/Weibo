@@ -11,7 +11,7 @@
 @class YCYTabBar;
 
 // warning 因为HWTabBar继承自UITabBar，所以称为HWTabBar的代理，也必须实现UITabBar的代理协议
-@protocol HWTabBarDelegate <UITabBarDelegate>
+@protocol YCYTabBarDelegate <UITabBarDelegate>
 
 @optional
 
@@ -19,6 +19,6 @@
 @end
 
 @interface YCYTabBar : UITabBar
-@property (nonatomic, weak) id<HWTabBarDelegate> delegate;
+@property (nonatomic, weak) id<YCYTabBarDelegate> delegate;
 
 @end

@@ -7,15 +7,15 @@
 //
 
 #import "YCYTabBarViewController.h"
-#import "PrefixHeader.pch"
-#import "YCYProfileViewController.h"
-#import "YCYDiscoverViewController.h"
 #import "YCYHomeViewController.h"
 #import "YCYMessageCenterViewController.h"
+#import "YCYDiscoverViewController.h"
+#import "YCYProfileViewController.h"
 #import "YCYNavigationController.h"
 #import "YCYTabBar.h"
+#import "PrefixHeader.pch"
 
-@interface YCYTabBarViewController ()
+@interface YCYTabBarViewController () <YCYTabBarDelegate>
 
 @end
 
@@ -39,7 +39,6 @@
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
     // 2.更换系统自带的tabbar
-    //    self.tabBar = [[HWTabBar alloc] init];
     YCYTabBar *tabBar = [[YCYTabBar alloc] init];
     tabBar.delegate = self;
     [self setValue:tabBar forKeyPath:@"tabBar"];
