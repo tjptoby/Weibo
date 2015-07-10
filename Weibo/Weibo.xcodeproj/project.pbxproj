@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040E285A1B4550F000A880DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E28591B4550F000A880DC /* Default-568h@2x.png */; };
 		04219CF91B4E3A0B008117CA /* YCYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04219CF81B4E3A0B008117CA /* YCYTabBar.m */; };
+		04219D061B4E628F008117CA /* YCYNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04219D051B4E628F008117CA /* YCYNewfeatureViewController.m */; };
 		042B515E1B4549D8006973C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B515D1B4549D8006973C3 /* Images.xcassets */; };
 		042B516D1B4549D8006973C3 /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B516C1B4549D8006973C3 /* WeiboTests.m */; };
 		04D28BA21B4A741A00941FBF /* YCYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D28BA11B4A741A00941FBF /* YCYSearchBar.m */; };
@@ -46,6 +47,8 @@
 		040E28591B4550F000A880DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		04219CF71B4E3A0B008117CA /* YCYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYTabBar.h; sourceTree = "<group>"; };
 		04219CF81B4E3A0B008117CA /* YCYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYTabBar.m; sourceTree = "<group>"; };
+		04219D041B4E628F008117CA /* YCYNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCYNewfeatureViewController.h; sourceTree = "<group>"; };
+		04219D051B4E628F008117CA /* YCYNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCYNewfeatureViewController.m; sourceTree = "<group>"; };
 		042B514D1B4549D8006973C3 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B51511B4549D8006973C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042B515D1B4549D8006973C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		040E285B1B45535500A880DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04219D021B4E6271008117CA /* Newfeature */,
 				04FFC54F1B4954FA0028872D /* Discover */,
 				04FFC5551B4954FA0028872D /* Home */,
 				04FFC55B1B4954FA0028872D /* Main */,
@@ -119,6 +123,23 @@
 				04FFC5781B4954FA0028872D /* Temp */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		04219D021B4E6271008117CA /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				04219D031B4E6271008117CA /* Controller */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
+		04219D031B4E6271008117CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04219D041B4E628F008117CA /* YCYNewfeatureViewController.h */,
+				04219D051B4E628F008117CA /* YCYNewfeatureViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		042B51441B4549D8006973C3 = {
@@ -507,6 +528,7 @@
 				04FFC5881B4954FA0028872D /* YCYAppDelegate.m in Sources */,
 				04FFC5851B4954FA0028872D /* YCYNavigationController.m in Sources */,
 				04FFC5821B4954FA0028872D /* YCYDiscoverViewController.m in Sources */,
+				04219D061B4E628F008117CA /* YCYNewfeatureViewController.m in Sources */,
 				04219CF91B4E3A0B008117CA /* YCYTabBar.m in Sources */,
 				04FFC5961B496B170028872D /* UIBarButtonItem+Extension.m in Sources */,
 				04FFC58D1B4954FA0028872D /* YCYTest2ViewController.m in Sources */,

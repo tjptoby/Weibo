@@ -8,6 +8,7 @@
 
 #import "YCYAppDelegate.h"
 #import "YCYTabBarViewController.h"
+#import "YCYNewfeatureViewController.h"
 
 @implementation YCYAppDelegate
 
@@ -17,7 +18,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     // 设置根控制器
-    self.window.rootViewController = [[YCYTabBarViewController alloc] init];
+//    self.window.rootViewController = [[YCYTabBarViewController alloc] init];
+    self.window.rootViewController = [[YCYNewfeatureViewController alloc] init];
     
     // 显示窗口
     [self.window makeKeyAndVisible];
