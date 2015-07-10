@@ -66,16 +66,6 @@
     pageControl.centerY = scrollH - 50;
     [self.view addSubview:pageControl];
     self.pageControl = pageControl;
-    
-    // UIPageControl就算没有设置尺寸，里面的内容还是照常显示的
-    //    pageControl.width = 100;
-    //    pageControl.height = 50;
-    //    pageControl.userInteractionEnabled = NO;
-    
-    //    UITextField *text = [[UITextField alloc] init];
-    //    text.frame = CGRectMake(10, 20, 100, 50);
-    //    text.borderStyle = UITextBorderStyleRoundedRect;
-    //    [self.view addSubview:text];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -112,27 +102,8 @@
     shareBtn.centerY = imageView.height * 0.65;
     [shareBtn addTarget:self action:@selector(shareClick:) forControlEvents:UIControlEventTouchUpInside];
     [imageView addSubview:shareBtn];
-    //    shareBtn.backgroundColor = [UIColor redColor];
-    //    shareBtn.imageView.backgroundColor = [UIColor blueColor];
-    //    shareBtn.titleLabel.backgroundColor = [UIColor yellowColor];
-    
-    // top left bottom right
-    
-    // EdgeInsets: 自切
-    // contentEdgeInsets:会影响按钮内部的所有内容（里面的imageView和titleLabel）
-    //    shareBtn.contentEdgeInsets = UIEdgeInsetsMake(10, 100, 0, 0);
-    
-    // titleEdgeInsets:只影响按钮内部的titleLabel
+
     shareBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-    
-    // imageEdgeInsets:只影响按钮内部的imageView
-    //    shareBtn.imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 50);
-    
-    
-    
-    //    shareBtn.titleEdgeInsets
-    //    shareBtn.imageEdgeInsets
-    //    shareBtn.contentEdgeInsets
     
     // 2.开始微博
     UIButton *startBtn = [[UIButton alloc] init];
