@@ -47,10 +47,7 @@
             [self setupLastImageView:imageView];
         }
     }
-    
-#warning 默认情况下，scrollView一创建出来，它里面可能就存在一些子控件了
-#warning 就算不主动添加子控件到scrollView中，scrollView内部还是可能会有一些子控件
-    
+
     // 3.设置scrollView的其他属性
     // 如果想要某个方向上不能滚动，那么这个方向对应的尺寸数值传0即可
     scrollView.contentSize = CGSizeMake(YCYNewfeatureCount * scrollW, 0);
@@ -157,51 +154,8 @@
 
 - (void)startClick
 {
-    // 切换到HWTabBarController
-    /*
-     切换控制器的手段
-     1.push：依赖于UINavigationController，控制器的切换是可逆的，比如A切换到B，B又可以回到A
-     2.modal：控制器的切换是可逆的，比如A切换到B，B又可以回到A
-     3.切换window的rootViewController
-     */
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     window.rootViewController = [[YCYTabBarViewController alloc] init];
-    
-    // modal方式，不建议采取：新特性控制器不会销毁
-    //    HWTabBarViewController *main = [[HWTabBarViewController alloc] init];
-    //    [self presentViewController:main animated:YES completion:nil];
 }
 
-/*
- 1.程序启动会自动加载叫做Default的图片
- 1> 3.5inch 非retain屏幕：Default.png
- 2> 3.5inch retina屏幕：Default@2x.png
- 3> 4.0inch retain屏幕: Default-568h@2x.png
- 
- 2.只有程序启动时自动去加载的图片, 才会自动在4inch retina时查找-568h@2x.png
- */
-
-/*
- 一个控件用肉眼看不见，有哪些可能
- 1.根本没有创建实例化这个控件
- 2.没有设置尺寸
- 3.控件的颜色跟父控件的背景色一样（实际上已经显示了，只不过用肉眼看不见）
- 4.透明度alpha <= 0.01
- 5.hidden = YES
- 6.没有添加到父控件中
- 7.被其他控件挡住了
- 8.位置不对
- 9.父控件发生了以上情况
- 10.特殊情况
- * UIImageView没有设置image属性，或者设置的图片名不对
- * UILabel没有设置文字，或者文字颜色和跟父控件的背景色一样
- * UITextField没有设置文字，或者没有设置边框样式borderStyle
- * UIPageControl没有设置总页数，不会显示小圆点
- * UIButton内部imageView和titleLabel的frame被篡改了，或者imageView和titleLabel没有内容
- * .....
- 
- 添加一个控件的建议（调试技巧）：
- 1.最好设置背景色和尺寸
- 2.控件的颜色尽量不要跟父控件的背景色一样
- */
 @end
