@@ -39,8 +39,8 @@
 - (void)plusClick
 {
     // 通知代理
-    if ([self.delegate respondsToSelector:@selector(tabBarDidClickPlusButton:)]) {
-        [self.delegate tabBarDidClickPlusButton:self];
+    if ([self.trust respondsToSelector:@selector(tabBarDidClickPlusButton:)]) {
+        [self.trust tabBarDidClickPlusButton:self];
     }
 }
 

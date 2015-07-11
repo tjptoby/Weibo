@@ -60,7 +60,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"test-message-%d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"test-message-%ld", (long)indexPath.row];
     
     return cell;
 }

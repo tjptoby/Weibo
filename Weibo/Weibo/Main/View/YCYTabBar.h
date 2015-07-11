@@ -19,6 +19,6 @@
 @end
 
 @interface YCYTabBar : UITabBar
-@property (nonatomic, weak) id<YCYTabBarDelegate> delegate;
+@property (nonatomic, weak) id<YCYTabBarDelegate> trust;
 
 @end
