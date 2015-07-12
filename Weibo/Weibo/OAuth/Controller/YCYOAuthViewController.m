@@ -7,6 +7,7 @@
 //
 
 #import "YCYOAuthViewController.h"
+#import <AFNetworking.h>
 
 @interface YCYOAuthViewController ()
 
@@ -23,10 +24,66 @@
     [self.view addSubview:webView];
     
     // 用webView加载登录页面
-    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=2893713829&redirect_uri=http://"];
+    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=2893713829&redirect_uri=http://www.baidu.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     
+}
+
+#pragma mark - webView代理方法
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    // 1.获得url
+    NSString *url = request.URL.absoluteString;
+    
+    // 2.判断是否为回调地址
+    NSRange range = [url rangeOfString:@"code="];
+    if (range.length != 0) { // 是回调地址
+        // 截取code=后面的参数值
+        int fromIndex = range.location + range.length;
+        NSString *code = [url substringFromIndex:fromIndex];
+        
+        // 利用code换取一个accessToken
+        [self accessTokenWithCode:code];
+    }
+    
+    return YES;
+}
+
+/**
+ *  利用code（授权成功后的request token）换取一个accessToken
+ *
+ *  @param code 授权成功后的request token
+ */
+- (void)accessTokenWithCode:(NSString *)code
+{
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"client_id"] = @"2893713829";
+    params[@"client_secret"] = @"f0da0c3d64ae8e60ca1db5a9d2c70a75";
+    params[@"grant_type"] = @"authorization_code";
+    params[@"redirect_uri"] = @"http://";
+    params[@"code"] = code;
+    
+    // 3.发送请求
+    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"请求成功-%@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"请求失败-%@", error);
+    }];
 }
 
 @end
