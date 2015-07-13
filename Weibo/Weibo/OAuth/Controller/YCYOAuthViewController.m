@@ -55,6 +55,9 @@
         
         // 利用code换取一个accessToken
         [self accessTokenWithCode:code];
+        
+        // 禁止加载回调地址
+        return NO;
     }
     
     return YES;
@@ -75,12 +78,17 @@
     params[@"client_id"] = @"2893713829";
     params[@"client_secret"] = @"f0da0c3d64ae8e60ca1db5a9d2c70a75";
     params[@"grant_type"] = @"authorization_code";
-    params[@"redirect_uri"] = @"http://";
+    params[@"redirect_uri"] = @"http://www.baidu.com";
     params[@"code"] = code;
     
     // 3.发送请求
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"请求成功-%@", responseObject);
+    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        // 沙盒路径
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"account.plist"];
+        
+        // 切换窗口的根控制器
+        [responseObject writeToFile:path atomically:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"请求失败-%@", error);
     }];
