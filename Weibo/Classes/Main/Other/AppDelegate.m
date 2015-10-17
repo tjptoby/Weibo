@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "YCYMessageCenterViewController.h"
+#import "YCYDiscoverViewController.h"
+#import "YCYProfileViewController.h"
+#import "YCYHomeViewController.h"
+#import "YCYOverall.h"
+#import "YCYTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +22,37 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // 1.创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // 2.设置根控制器
+    self.window.rootViewController = [[YCYTabBarViewController alloc] init];
+    
+    // 4.显示窗口
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
+{
+    // 设置子控制器的文字和图片
+    childVc.tabBarItem.title = title;
+    childVc.tabBarItem.image = [UIImage imageNamed:image];
+    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    // 设置文字样式
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSForegroundColorAttributeName] = YCYColor(123, 123, 123);
+    
+    NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
+    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    
+    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    
+    [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
+    
+    childVc.view.backgroundColor = YCYRandomColor;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

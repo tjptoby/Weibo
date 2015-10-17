@@ -6,17 +6,17 @@
 //  Copyright (c) 2014年 heima. All rights reserved.
 //
 
-#import "HWTest2ViewController.h"
-#import "HWTest3ViewController.h"
+#import "YCYTest2ViewController.h"
+#import "YCYTest3ViewController.h"
 
-@interface HWTest2ViewController ()
+@interface YCYTest2ViewController ()
 
 @end
 
-@implementation HWTest2ViewController
+@implementation YCYTest2ViewController
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    HWTest3ViewController *test3 = [[HWTest3ViewController alloc] init];
+    YCYTest3ViewController *test3 = [[YCYTest3ViewController alloc] init];
     test3.title = @"测试3控制器";
     [self.navigationController pushViewController:test3 animated:YES];
 }

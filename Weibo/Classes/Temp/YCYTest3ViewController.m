@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 heima. All rights reserved.
 //
 
-#import "HWTest3ViewController.h"
+#import "YCYTest3ViewController.h"
 
-@interface HWTest3ViewController ()
+@interface YCYTest3ViewController ()
 
 @end
 
-@implementation HWTest3ViewController
+@implementation YCYTest3ViewController
 
 - (void)viewDidLoad
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HWTest3ViewController : UITableViewController
+@interface YCYTest3ViewController : UITableViewController
 
 @end

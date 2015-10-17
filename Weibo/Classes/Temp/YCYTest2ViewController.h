@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HWTest2ViewController : UIViewController
+@interface YCYTest2ViewController : UIViewController
 
 @end

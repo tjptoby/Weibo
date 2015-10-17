@@ -1,19 +1,19 @@
 //
-//  HWMessageCenterViewController.m
-//  黑马微博2期
+//  YCYMessageCenterViewController.m
+//  Weibo
 //
-//  Created by apple on 14-10-7.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by Cheney on 15/10/17.
+//  Copyright © 2015年 Cheney. All rights reserved.
 //
 
-#import "HWMessageCenterViewController.h"
-#import "HWTest1ViewController.h"
+#import "YCYMessageCenterViewController.h"
+#import "YCYTest1ViewController.h"
 
-@interface HWMessageCenterViewController ()
+@interface YCYMessageCenterViewController ()
 
 @end
 
-@implementation HWMessageCenterViewController
+@implementation YCYMessageCenterViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -67,7 +67,7 @@
 #pragma mark - 代理方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HWTest1ViewController *test1 = [[HWTest1ViewController alloc] init];
+    YCYTest1ViewController *test1 = [[YCYTest1ViewController alloc] init];
     test1.title = @"测试1控制器";
     // 当test1控制器被push的时候，test1所在的tabbarcontroller的tabbar会自动隐藏
     // 当test1控制器被pop的时候，test1所在的tabbarcontroller的tabbar会自动显示

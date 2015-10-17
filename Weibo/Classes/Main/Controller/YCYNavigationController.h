@@ -1,13 +1,13 @@
 //
-//  HWNavigationController.h
-//  黑马微博2期
+//  YCYNavigationController.h
+//  Weibo
 //
-//  Created by apple on 14-10-7.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by Cheney on 15/10/17.
+//  Copyright © 2015年 Cheney. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HWNavigationController : UINavigationController
+@interface YCYNavigationController : UINavigationController
 
 @end
