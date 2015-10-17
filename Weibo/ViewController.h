@@ -2,8 +2,8 @@
 //  ViewController.h
 //  Weibo
 //
-//  Created by Cheney on 15/10/15.
-//  Copyright (c) 2015年 Cheney. All rights reserved.
+//  Created by Cheney on 15/10/17.
+//  Copyright © 2015年 Cheney. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
